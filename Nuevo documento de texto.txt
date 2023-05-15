@@ -1,0 +1,17 @@
+2. como el console.log esta despues que los breakpoints estos se ejecutan antes del console.log
+
+
+3. Consola: La consola te permite escribir javascript y debuguear código sin necesidad de un IDE. 
+   Sources: Aquí puedes los ficheros del sitio web y hacer pruebas del sitio web que corre en el navegador. 
+   Elements: Elements te permite visualizar el dom y poder hacer cambios sobre el mismo, sobre todo sirve para visualizar estilos en tiempo real.
+
+
+4. const contadorDivisible = (n) => {
+    for (let i = 0; i <= 100; i++) {
+      i % n === 0 ? console.log(i) : null;
+    }
+  }
+
+contadorDivisible(7);
+
+5.

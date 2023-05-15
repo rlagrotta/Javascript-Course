@@ -1,0 +1,51 @@
+2. como el console.log esta despues que los breakpoints estos se ejecutan antes del console.log
+
+
+3. Consola: La consola te permite escribir javascript y debuguear código sin necesidad de un IDE. 
+   Sources: Aquí puedes los ficheros del sitio web y hacer pruebas del sitio web que corre en el navegador. 
+   Elements: Elements te permite visualizar el dom y poder hacer cambios sobre el mismo, sobre todo sirve para visualizar estilos en tiempo real.
+
+
+4. El codigo para el contador del 1 al 100 que imprime solo los numeros del 0 al 100 que son divisibles por 7 sería el siguiente:  
+
+// Aquí recibimos el número que viene de la funcion
+const contadorDivisible = (n) => {
+// hacemos un ciclo loop que vaya de 0 a 100
+    for (let i = 0; i <= 100; i++) {
+// nos fijamos si es divisible del 0 al 100 y que lo imprima solamente si es divisible, si no que sea null osea que no haga nada
+      i % n === 0 ? console.log(i) : null;
+    }
+  }
+
+// llamamos a la función
+contadorDivisible(7);
+
+5.Etiqueta <script>:
+La etiqueta <script> es la forma tradicional de incluir y ejecutar código JavaScript en una página web. Al usar <script>, el código JavaScript se trata como un script clásico sin módulos. Algunas características y diferencias clave son:
+Ámbito global compartido: El código se ejecuta en el ámbito global compartido de la página, lo que significa que las variables y funciones definidas en el script pueden ser accedidas y modificadas por otros scripts en la misma página que utilicen la etiqueta <script>.
+
+Carga síncrona: Por defecto, la carga y ejecución de los scripts <script> bloquean la carga y renderización de la página hasta que se complete la ejecución del script. Esto puede afectar el rendimiento y la experiencia del usuario si el script es largo o tarda en cargar.
+
+No es necesario el atributo type: Si no se especifica el atributo type, se asume que es JavaScript por defecto, por lo que es común ver la etiqueta <script> sin el atributo type en el código HTML.
+
+Etiqueta <script type="module">:
+La etiqueta <script type="module"> introduce el concepto de módulos en JavaScript y proporciona un enfoque más moderno y modular para la organización y carga de código. Al utilizar <script type="module">, se habilitan algunas características adicionales:
+Ámbito de módulo: El código se ejecuta en un ámbito de módulo aislado, lo que significa que las variables y funciones definidas en el módulo no se mezclan con el ámbito global de la página y no pueden ser accedidas por otros scripts a menos que se exporten explícitamente.
+
+Carga asíncrona: Los scripts de tipo módulo se cargan y ejecutan de forma asíncrona, lo que permite que la página continúe cargando y renderizando mientras se descargan y ejecutan los módulos. Esto mejora el rendimiento y la experiencia del usuario.
+
+Importación y exportación de módulos: Los módulos pueden importar y exportar funciones, objetos y variables entre sí, lo que facilita la estructura modular y la reutilización de código. Se utilizan las palabras clave import y export para gestionar las dependencias entre los módulos.
+
+Mismo origen y CORS: Los módulos de tipo <script type="module"> siguen la política de mismo origen y las reglas de CORS (Cross-Origin Resource Sharing) para garantizar la seguridad en la carga de los módulos desde orígenes externos.
+
+6. const formatter = {
+    cadena: "",
+    prefix: "Hello",
+    append: function(texto) {
+        this.cadena = this.prefix + " " + texto
+    }
+};
+
+formatter.append("Roque Lagrotta")
+
+console.log(formatter.cadena)
